@@ -9,11 +9,16 @@ public class TopInterviewTest{
     @Test
     public void testRemoveDuplicates(){
         
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums1 = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums2 = {1,2};
         
-        int result = new RemoveDuplicates().removeDuplicates(nums);
-        System.out.println(result);
-        assert(result == 5 &&  nums[0] == 0 && nums[1] == 1 && nums[2] == 2 && nums[3] == 3 && nums[4] == 4);
+        int result1 = new RemoveDuplicates().removeDuplicates2(nums1);
+        System.out.println(result1);
+        assert(result1 == 5 &&  nums1[0] == 0 && nums1[1] == 1 && nums1[2] == 2 && nums1[3] == 3 && nums1[4] == 4);
+    
+        int result2 = new RemoveDuplicates().removeDuplicates2(nums2);
+        System.out.println(result2);
+        assert(result2 == 2 && nums2[0] == 1 && nums1[1] == 2);
     }
 
     @Test

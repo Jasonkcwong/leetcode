@@ -37,10 +37,12 @@ public class RemoveDuplicates {
             return 1;
         }
         int idx = 1;
+        int tmp = nums[idx];
         for(int i = start ; i < nums.length ; i++){
-            if(nums[i] != nums[idx]){
+            if(nums[i] != tmp){
                 nums[idx] = nums[i];
                 idx++;
+                tmp = nums[i];
             }
         }
         return idx;
