@@ -24,7 +24,7 @@ public class RemoveElement {
         return idx;
     }
 
-    public void shift(int[] nums, int idx){
+    private void shift(int[] nums, int idx){
         for(int i = idx ; i < nums.length - 1 ; i++){
             nums[i] = nums[i + 1];
         }
